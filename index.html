@@ -122,12 +122,8 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:min(912px,100svh);display:flex;align-items:flex-end;overflow:clip;isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-2;overflow:clip;background:linear-gradient(180deg,#2b3a12 0%,#1c1c1c 100%)}
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:clip;background:#1c1c1c}
 .hero-bg img{width:100%;height:118%;object-fit:cover;object-position:50% 30%;opacity:.5}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(34,163,255,.43) 0%,rgba(66,81,0,.43) 69.2%);
-}
 .hero .wrap{position:relative;padding-block:clamp(96px,9vw,110px)}
 .hero-inner{position:relative;width:min(713px,100%)}
 
@@ -409,8 +405,6 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
      nothing to conflict with the artifact host's own scroll handling
      (a JS-driven version of this caused scrolling to lock up entirely
      when embedded) */
-  .hero-bg img{animation:heroParallax linear both;animation-timeline:scroll(root block);animation-range:0 100svh;will-change:transform}
-  @keyframes heroParallax{from{translate:0 0}to{translate:0 6%}}
   .seal{animation:sealTurn linear both;animation-timeline:scroll(root block);animation-range:0 100svh;will-change:transform}
   @keyframes sealTurn{from{rotate:-7deg}to{rotate:9deg}}
   .par{animation:parMove linear both;animation-timeline:view();animation-range:entry 0% exit 100%;will-change:transform}
