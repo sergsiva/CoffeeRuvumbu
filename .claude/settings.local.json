@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk 'NR==466,NR==500' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(curl -sI http://localhost:8791/ruvumbu-coffee.html)",
+      "Bash(python -m http.server 8791)",
+      "Bash(python -m http.server 8792)",
+      "Bash(curl -sL -o \"C:/Users/Serg/AppData/Local/Temp/claude/E--YandexDisk-work-Coffee-Ruvumbu-Coffee-v4/f614e7da-7abd-4bb6-89df-1e875128f7ea/scratchpad/figma-gallery.png\" \"https://www.figma.com/api/mcp/asset/621349a2-e238-4529-98c4-5778de898068.png\")",
+      "mcp__d863d722-238f-45be-b807-72cb45cbc5a8__get_figma_skill",
+      "mcp__d863d722-238f-45be-b807-72cb45cbc5a8__get_design_context",
+      "Bash(node -e \"console.log\\(process.version\\)\")",
+      "Bash(node build.js)",
+      "Bash(node rebuild.js)",
+      "Bash(node build2.js)",
+      "Bash(awk 'NR>=495 && NR<=515 {print NR\": \"length\\($0\\)\" chars\"}' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(awk 'NR>=488 && NR<=513' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(awk 'NR==670,NR==682' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(grep -n '^<script>$\\\\|<div class=\"lightbox\"\\\\|^</body></html>$' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(grep -n '^<script>$\\\\|<div class=\"lightbox\"\\\\|^</body></html>$' 'E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html')",
+      "Bash(awk 'NR==736,NR==740' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "mcp__d863d722-238f-45be-b807-72cb45cbc5a8__get_metadata",
+      "Bash(grep -n '<div class=\"lightbox\"\\\\|^<script>$\\\\|\\(function\\(\\){' \"E:/YandexDisk/work/Coffee Ruvumbu/Coffee v4/ruvumbu-coffee.html\")",
+      "Bash(node clean.js)",
+      "Bash(node build3.js)",
+      "Bash(node swap_hero_bg.js)",
+      "Bash(node -e ' *)",
+      "mcp__d863d722-238f-45be-b807-72cb45cbc5a8__get_screenshot",
+      "Bash(curl -sL -o \"C:/Users/Serg/AppData/Local/Temp/claude/E--YandexDisk-work-Coffee-Ruvumbu-Coffee-v4/f614e7da-7abd-4bb6-89df-1e875128f7ea/scratchpad/gallery/video-section.png\" \"https://www.figma.com/api/mcp/asset/ec4e71e3-2d8c-4b03-8f70-83db934d8d07.png\")"
+    ]
+  }
+}
