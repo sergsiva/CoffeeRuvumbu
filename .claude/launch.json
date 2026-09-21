@@ -4,7 +4,7 @@
     {
       "name": "ruvumbu-static",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["-e", "require('http').createServer((req,res)=>{const fs=require('fs'),path=require('path');let p=decodeURIComponent(req.url.split('?')[0]);if(p==='/')p='/ruvumbu-coffee.html';const full=path.join(process.cwd(),p);fs.readFile(full,(err,data)=>{if(err){res.writeHead(404);res.end('not found');return;}const ext=path.extname(full);const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml'};res.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'});res.end(data);});}).listen(8793);"],
+      "runtimeArgs": ["-e", "require('http').createServer((req,res)=>{const fs=require('fs'),path=require('path');let p=decodeURIComponent(req.url.split('?')[0]);if(p==='/')p='/index.html';const full=path.join(process.cwd(),p);fs.readFile(full,(err,data)=>{if(err){res.writeHead(404);res.end('not found');return;}const ext=path.extname(full);const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.csv':'text/csv','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.mp4':'video/mp4'};res.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'});res.end(data);});}).listen(8793);"],
       "port": 8793
     }
   ]
