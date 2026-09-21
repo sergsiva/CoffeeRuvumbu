@@ -81,7 +81,12 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
   display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
   padding:.7rem 2.2rem;border-radius:var(--r-pill);border:1px solid transparent;
   font:inherit;font-size:1rem;font-weight:500;letter-spacing:-.005em;cursor:pointer;
+  min-width:220px;
   transition:background .25s cubic-bezier(.16,1,.3,1),border-color .25s,color .25s,transform .12s;
+}
+@media (max-width:560px){
+  .btn{width:100%;min-width:0}
+  .hero-cta{flex-direction:column;align-items:stretch}
 }
 .btn-primary{background:var(--terra);color:var(--on-terra)}
 .btn-primary:hover{background:var(--terra-press)}
@@ -155,8 +160,9 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
 .hero .lead{margin-top:clamp(18px,2vw,34px);max-width:614px;font-size:clamp(1rem,1vw,1.2rem)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(22px,2.8vw,44px)}
 .seal{
-  position:absolute;z-index:4;width:clamp(96px,9.6vw,185px);
-  right:clamp(-14px,0.5vw,24px);top:clamp(-26px,-1.4vw,-14px);
+  position:absolute;z-index:4;width:clamp(140px,9.6vw,185px);
+  left:75%;transform:translateX(-50%);
+  top:calc(clamp(-26px,-1.4vw,-14px) - 40px);
   filter:drop-shadow(0 10px 18px rgba(0,0,0,.22));
 }
 @media (max-width:900px){
@@ -165,7 +171,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
   .hero{align-items:center;min-height:auto}
   .hero .wrap{padding-block:118px 56px}
   .hero h1{white-space:normal;padding-right:56px}
-  .seal{width:82px;right:-6px;top:-24px}
+  .seal{width:140px;left:75%;top:calc(-24px - 40px)}
 }
 @media (min-width:901px){.mobile-nav{display:none}}
 @media (max-width:900px){.nav-actions{gap:.9rem}}
@@ -213,9 +219,9 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
 /* ---------- coffee ---------- */
 .coffee-grid{display:grid;grid-template-columns:minmax(0,635fr) minmax(0,526fr);gap:clamp(30px,10vw,130px);align-items:start}
 .coffee-stack{position:relative;aspect-ratio:635/801}
-.coffee-1{position:absolute;left:0;top:0;width:78.6%;border-radius:var(--r-media)}
-.coffee-2{position:absolute;left:44.3%;top:47.4%;width:55.7%;border-radius:var(--r-media);box-shadow:0 24px 50px -28px rgba(32,36,42,.55)}
-.coffee-card{position:absolute;left:9.9%;top:69.7%;width:50.2%;z-index:2}
+.coffee-1{position:absolute;left:0;top:0;width:78.6%;border-radius:var(--r-media);box-shadow:0 10px 18px rgba(0,0,0,.22)}
+.coffee-2{position:absolute;left:44.3%;top:47.4%;width:55.7%;border-radius:var(--r-media);box-shadow:0 10px 18px rgba(0,0,0,.22)}
+.coffee-card{position:absolute;left:9.9%;top:69.7%;width:50.2%;z-index:2;rotate:-5deg;filter:drop-shadow(0 10px 18px rgba(0,0,0,.22))}
 .coffee-copy{display:flex;flex-direction:column;gap:clamp(22px,2.3vw,44px);padding-top:clamp(0px,2.5vw,33px)}
 .coffee-copy h2{width:min(600px,116%);text-wrap:pretty}
 .coffee-copy .lead{max-width:418px}
@@ -493,7 +499,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
       </div>
 
       <div class="metrics rv">
-        <img class="splash-metrics" src="assets/img branch.png" alt="" aria-hidden="true" width="642" height="530">
+        <img class="splash-metrics" src="assets/splash.png" alt="" aria-hidden="true" width="642" height="240">
         <div class="metric"><span class="n" data-count="15" data-suffix="+">15+</span><span class="l" data-i18n="station.metric1">years of operation</span></div>
         <div class="metric"><span class="n" data-count="40" data-suffix="+">40+</span><span class="l" data-i18n="station.metric2">hectares under cultivation</span></div>
         <div class="metric"><span class="n" data-count="650">650</span><span class="l" data-i18n="station.metric3">farming families partnered</span></div>
@@ -519,7 +525,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
           <div class="spec"><dt data-i18n="coffee.spec.cup.dt">Cup profile</dt><dd data-i18n="coffee.spec.cup.dd">Citrus, black tea, caramel</dd></div>
           <div class="spec"><dt data-i18n="coffee.spec.harvest.dt">Harvest</dt><dd data-i18n="coffee.spec.harvest.dd">July</dd></div>
         </dl>
-        <div class="rv rv-d2"><a class="btn btn-primary" href="mailto:hello@ruvumbu.rw?subject=Offer%20sheet" data-i18n="coffee.download">Get Offers</a></div>
+        <div class="rv rv-d2"><button type="button" class="btn btn-primary" data-open-modal="quote" data-i18n="coffee.download">Get Offers</button></div>
       </div>
     </div>
   </section>
@@ -667,7 +673,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
           <li data-i18n="tours.incl3">Cupping session at the station</li>
           <li data-i18n="tours.incl4">Time with the people who run it</li>
         </ul>
-        <button type="button" class="btn btn-primary rv rv-d2" data-open-modal="tour" data-i18n="tours.cta">Get Offers</button>
+        <button type="button" class="btn btn-primary rv rv-d2" data-open-modal="quote" data-i18n="tours.cta">Get Offers</button>
       </div>
     </div>
   </section>
