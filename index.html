@@ -51,7 +51,8 @@
 
 *{box-sizing:border-box}
 html{overflow-x:clip}
-@media (hover:hover) and (pointer:fine){html{scroll-behavior:smooth}}
+@media (min-width:901px){html{scroll-behavior:smooth}}
+.section[id],.terroir[id]{scroll-margin-top:90px}
 body{
   margin:0;color:var(--ink);
   background:var(--ground) url('assets/GreenBG.jpg') center/cover no-repeat fixed;
@@ -372,7 +373,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
 /* ---------- footer ---------- */
 .panel-foot{margin-bottom:600px}
 .foot{position:relative;overflow:clip;color:var(--ink-3)}
-.foot-splash{position:absolute;right:6%;bottom:0;width:34%;max-width:420px;height:auto;mix-blend-mode:multiply;opacity:.9;pointer-events:none}
+.foot-splash{position:absolute;left:50%;bottom:0;translate:-50% 85%;transform:scaleY(-1);width:34%;max-width:420px;height:auto;mix-blend-mode:multiply;opacity:.9;pointer-events:none}
 .foot-inner{
   position:relative;z-index:1;display:grid;
   grid-template-columns:auto 1fr auto;
@@ -407,7 +408,7 @@ html[lang="ru"] h1,html[lang="ru"] h2,html[lang="ru"] h3,html[lang="ru"] .brand,
   }
   .foot-nav,.foot-terms{flex-direction:column;gap:14px;justify-self:start}
   .foot-legal,.foot-credit{justify-self:start}
-  .foot-splash{width:52%;right:-8%}
+  .foot-splash{width:52%}
 }
 
 /* ---------- modals (quote / tour) ---------- */
