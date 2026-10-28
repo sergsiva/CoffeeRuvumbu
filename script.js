@@ -297,7 +297,6 @@
       if (overlay.hidden) return;
       overlay.hidden = true;
       if (!anyOpen()) document.body.style.overflow = "";
-      // вернуть фокус первому подходящему триггеру
       var focusTarget = document.querySelector('[data-open-modal="' + overlay.id.replace(/Modal$/, "") + '"]');
       if (focusTarget && focusTarget.focus) focusTarget.focus();
     }
@@ -331,7 +330,7 @@
       if (e.key === "Escape") closeAllModals();
     });
 
-    /* выбор тарифа в таблице */
+    /* выбор тарифа в таблице (не сломается, если таблица закомментирована) */
     document.querySelectorAll(".price-row").forEach(function(row){
       var radio = row.querySelector('input[type="radio"]');
       function selectRow(){

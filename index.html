@@ -334,6 +334,11 @@
     <button class="modal-close" type="button" data-close-modal aria-label="Close">&times;</button>
     <h3 id="quoteModalTitle" data-i18n="quote.title">Get a wholesale quote</h3>
     <p class="modal-lead" data-i18n="quote.lead">Pick a volume tier, leave your details, and we'll send pricing to your inbox.</p>
+
+    <!--
+      Прайсы временно скрыты. Чтобы вернуть — раскомментируй блок ниже
+      (и, при желании, верни формулировку в quote.lead).
+
     <table class="price-table">
       <thead>
         <tr>
@@ -349,13 +354,13 @@
           <td>$11.00/kg</td>
         </tr>
         <tr class="price-row" data-tier="2-3-pallets">
-          <td><label><input type="radio" name="tier" value="2-3-pallets"><span data-i18n="quote.row2.vol">2&ndash;3 pallets</span></label></td>
-          <td data-i18n="quote.row2.weight">1,200&ndash;1,800 kg</td>
+          <td><label><input type="radio" name="tier" value="2-3-pallets"><span data-i18n="quote.row2.vol">2-3 pallets</span></label></td>
+          <td data-i18n="quote.row2.weight">1,200-1,800 kg</td>
           <td>$10.50/kg</td>
         </tr>
         <tr class="price-row" data-tier="4-7-pallets">
-          <td><label><input type="radio" name="tier" value="4-7-pallets"><span data-i18n="quote.row3.vol">4&ndash;7 pallets</span></label></td>
-          <td data-i18n="quote.row3.weight">2,400&ndash;4,200 kg</td>
+          <td><label><input type="radio" name="tier" value="4-7-pallets"><span data-i18n="quote.row3.vol">4-7 pallets</span></label></td>
+          <td data-i18n="quote.row3.weight">2,400-4,200 kg</td>
           <td>$9.90/kg</td>
         </tr>
         <tr class="price-row" data-tier="8-plus-pallets">
@@ -370,6 +375,8 @@
         </tr>
       </tbody>
     </table>
+    -->
+
     <form class="modal-form" id="quoteForm">
       <label class="field"><span data-i18n="quote.name">Name</span><input type="text" name="name" required></label>
       <label class="field"><span data-i18n="quote.email">Email</span><input type="email" name="email" required></label>
